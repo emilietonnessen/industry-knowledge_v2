@@ -1,0 +1,108 @@
+.about {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    
+    min-height: 100vh;
+    margin-bottom: 30rem;
+
+    @media only screen and (max-width: $bp-lap) {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+    }
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    min-height: 65rem;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        flex-direction: column;
+    }
+
+    & div {
+        flex: 0 0 50%
+    }
+}
+
+.development {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(40rem, 1fr));
+    column-gap: 5rem;
+    row-gap: 8rem;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__headline {
+        grid-column: 1 / -1;
+    }
+}
+
+.educations {
+    grid-column: 1 / 2;
+}
+
+.education {
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        margin-bottom: 3rem;
+    }
+
+    &__course-name {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: .5rem;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-mobile-lg) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__desc {
+        font-weight: 200;
+    }
+}
+
+.work-experiences {
+    grid-column: 2 / 3;
+
+    background-color: $color-grey-dark-2;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tools,
+.courses {
+    grid-column: 1 / -1;
+}
+
+
+
+.certificates {
+    margin: 5rem 0;
+}
+
+
+
+.frontend__content,
+.backend__content {
+    display: flex;
+    padding-right: 3rem;
+    
+
+    & > * {
+        flex: 0 0 33%;
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+

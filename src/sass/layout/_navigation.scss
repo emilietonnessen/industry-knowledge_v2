@@ -1,0 +1,289 @@
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+
+    height: 100vh;
+    width: 35rem;
+    background-color: $color-grey-dark-2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: $bp-lap-lg) {
+        width: 25rem;
+    }
+
+    @media only screen and (max-width: $bp-lap) {
+        flex-direction: row;
+        //grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        height: unset;
+        width: 100%;
+
+        position: fixed;
+        z-index: 100;
+        top:0;
+        right: 0;
+        box-shadow: $box-shadow-default;
+
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-rows: 10rem;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: $bp-tab-port-small) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        height: 10rem;
+    }
+}
+
+.brand {
+    cursor: pointer;
+    padding: 5rem;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $bp-lap) {
+        padding: 10%;
+        height: 100%;
+    }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        padding: 1.5rem;
+    }
+
+    &__logo {
+        width: 100%;
+        display: block;
+
+        @media only screen and (max-width: $bp-lap) {
+            height: 100%;
+            width: unset;
+           
+        }
+    }
+}
+
+.menu {
+    margin-top: 3rem;
+    margin-bottom: auto;
+    transition: all .3s;
+    
+    @media only screen and (max-width: $bp-lap) {
+        margin: 0;
+        height: 10rem;
+    }
+
+    @media only screen and (max-width: $bp-tab-port-small) {
+        position: absolute;
+        top: 0;
+        right: -100vw;
+        height: 100vh;
+        background-color: $color-grey-dark-2;
+        z-index: 200;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        list-style: none;
+
+        @media only screen and (max-width: $bp-lap) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            gap: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-port-small) {
+            flex-direction: column;
+            height: unset;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    &__item {
+        transition: all .2s;
+        position: relative;
+
+        
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        
+        @media only screen and (max-width: $bp-lap) {
+            margin-bottom: 0 !important;
+            height: 100%;
+            line-height: 10rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-port-small) {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--active {
+            background-color: $color-primary;
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0%;
+        height: 100%;
+        width: 3px;
+        background-color: $color-primary;
+        transform: scaleY(0);
+        transition: transform .2s,
+            width .4s cubic-bezier(1, 0, 0, 1) .2s,
+            background-color .1s;
+    }
+
+
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        background-color: lighten($color-primary, 10);
+    }
+
+    &__link,
+    &__link:link,
+    &__link:active {
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        padding-left: 25%;
+        cursor: pointer;
+        z-index: 10;
+        position: relative;
+
+        @media only screen and (max-width: $bp-lap) {
+            display: flex;
+            padding: 0 3rem;
+            line-height: 10rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-port-small) {
+            font-size: 2.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & i {
+            margin-right: 2rem;
+            width: $font-size-default;
+            font-size: 1.8rem;
+
+            @media only screen and (max-width: $bp-lap) {
+                align-self: center;
+            }
+
+            @media only screen and (max-width: $bp-tab-port-small) {
+                font-size: 2.5rem;
+                margin-right: 4rem;
+            }
+        }
+
+        &--active {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.menu-open {
+    right: 0;
+}
+
+.media-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+
+    @media only screen and (max-width: $bp-lap) {
+        gap: 2rem;
+        padding: 0 15%;
+    }
+
+    @media only screen and (max-width: $bp-tab-port-small) {
+        display: none;
+    }
+
+    &__link {
+        color: $color-white;
+        font-size: 5rem;
+        transition: all .2s;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        & i {
+            @media only screen and (max-width: $bp-lap) {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+.nav-icon {
+    display: none;
+    height: 100%;
+    align-items: center;
+    padding: 0 3rem;
+    cursor: pointer;
+    z-index: 1000;
+    
+    @media only screen and (max-width: $bp-tab-port-small) {
+        display: flex;
+    }
+
+    &__button {
+        border: none;
+        border-radius: 0%;
+        outline: none;
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        cursor: pointer;
+        
+        &::before,
+        &::after {
+            content: "";
+            background-color: #fff;
+            height: 2px;
+            width: 4.5rem;
+            display: block;
+            transition: all .3s;
+        }
+
+        &::before{transform: translateY(-1.3rem);}
+        &::after{transform: translateY(1.3rem);}
+    }
+
+    &:hover  &__button::before{transform: translateY(-1.7rem);}
+    &:hover  &__button::after{transform: translateY(1.7rem);}
+}

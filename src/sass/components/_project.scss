@@ -1,0 +1,53 @@
+.projects {
+    display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(3, minmax(25rem, 1fr));
+    gap: 5rem;
+    margin-top: 10rem;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        grid-template-columns: repeat(2, minmax(25rem, 1fr));
+    }
+
+    @media only screen and (max-width: $bp-mobile-lg) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: inherit;
+
+    &__title{
+        z-index: 20;
+        align-self: start;
+        background-color: rgba($color-grey-dark-2, 1);
+        font-weight: 300;
+        padding: 1rem 3rem;
+        transform: translateY(-50%) translateX(-10%);
+    }
+
+    &__image {
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .3s;
+        cursor: pointer;
+        box-shadow: $box-shadow-default;
+
+        &:hover,
+        &:focus {
+            transform: translateY(-1.5rem) scale(1.1);
+            box-shadow: $box-shadow-hover;
+        }
+
+        &:active {
+            transform: translateY(1.5rem) scale(.95);
+            box-shadow: $box-shadow-active;
+        }
+    }
+}
