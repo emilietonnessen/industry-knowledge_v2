@@ -1,13 +1,8 @@
 import logo from '../assets/logo.png';
 import emilie1 from '../assets/emilie-1-2.jpg'
 import Hero from '../components/Hero';
-import { useEffect } from 'react';
 
 const Landingpage: React.FC = () => {
-    // Notify the user that there might be errors
-    /* useEffect(() => {
-        alert('This website is under construction and might not work properly')
-    }, []) */
 
     return (
         <section id="landingpage" className="landingpage">

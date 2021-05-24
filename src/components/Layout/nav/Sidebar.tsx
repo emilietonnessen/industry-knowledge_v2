@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import Brand from './Brand';
-import Media from './Media';
-import Menu from './Menu';
+import Media from './SocialMediaLinks';
 
 const Sidebar = () => {
-    const [isMenuOpen, setMenuOpen] = useState('false');
+    const [isMenuOpen, setMenuOpen] = useState<string | boolean>('false');
 
     const openMenuHandler = () => {
         setMenuOpen(!isMenuOpen); 

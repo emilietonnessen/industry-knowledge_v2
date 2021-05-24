@@ -7,9 +7,9 @@ import { useEffect, useState } from 'react';
 
 const Portfolio = () => {
     const projectsArray = projectsJSON;
-    const magnifyingGlass = <i class="far fa-search"></i>;
-    const cross = <i class="fal fa-times"></i>;
-    const [projects, setProjects] = useState([]);
+    const magnifyingGlass = <i className="far fa-search"></i>;
+    const cross = <i className="fal fa-times"></i>;
+    const [projects, setProjects] = useState<any>([]);
     const [searchValue, setSearchValue] = useState('');
     const [searchFocus , setSearchFocus] = useState(false);
     const [searchIcon, setSearchIcon] = useState(magnifyingGlass);
@@ -40,7 +40,8 @@ const Portfolio = () => {
         /* if(!searchFocus || search.length === 0) {
             setSearchIcon(magnifyingGlass);
         } */
-    }, [search, projectsArray]);
+        // eslint-disable-line react-hooks/exhaustive-deps
+    }, []);
 
     const searchHandler = (e) => {
         setSearchValue(e.target.value);

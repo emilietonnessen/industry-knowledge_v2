@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-const Menu = ({isMenuOpen}) => {
+interface MenuProps {
+    isMenuOpen: any;
+}
+
+const Menu: React.FC<MenuProps> = ({isMenuOpen}) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
 
