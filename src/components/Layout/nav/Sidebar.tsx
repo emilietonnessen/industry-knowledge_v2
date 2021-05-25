@@ -10,7 +10,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className="sidebar">
+        <nav className="sidebar">
             <Brand />
             {/* <Menu  isMenuOpen={isMenuOpen ? true : false } /> */}
             <nav className={isMenuOpen ? 'menu' : 'menu menu-open' }>
@@ -43,7 +43,7 @@ const Sidebar = () => {
                 <button className="nav-icon__button"></button>
             </div>
             
-        </div>
+        </nav>
     );
 }
 

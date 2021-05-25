@@ -1,34 +1,4 @@
-.landingpage {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
 
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    position: relative;
-
-
-    @media only screen and (max-width: $bp-lap) {
-        min-height: unset;
-
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-    }
-
-    @media only screen and (max-width: $bp-mobile-lg) {
-        display: grid;
-        grid-template-columns: 1fr 35%;
-        grid-template-rows: 0 1fr;
-        margin-top: 5vh;
-    } 
-
-    @media only screen and (max-width: $bp-mobile-lg) {
-        //grid-template-columns: 1fr;
-        padding: 0 !important;
-        box-sizing: border-box;
-    } 
-}
 
 .hero {
     flex: 0 0 70%;
@@ -137,11 +107,11 @@
         &--logo {
             position: absolute;
             top: -22rem;
-            right: -15rem;
+            right: 0;
             width: 40rem;
             z-index: 1;
 
-            @media only screen and (max-width: $bp-desktop) {
+            /* @media only screen and (max-width: $bp-desktop) {
                 width: 30rem;
                 top: -15rem;
                 right: -10rem;
@@ -164,7 +134,7 @@
 
             @media only screen and (max-width: $bp-mobile-lg) {
                 display: none;
-            }
+            } */
         }
     }
 }

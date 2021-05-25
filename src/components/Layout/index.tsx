@@ -25,7 +25,7 @@ const Layout: React.FC<LayoutProps> = ({page, children}) => {
 
             <div className="layout">
                 <Sidebar />
-                <Main page={page} >
+                <Main>
                     {children}
                 </Main>
                 
