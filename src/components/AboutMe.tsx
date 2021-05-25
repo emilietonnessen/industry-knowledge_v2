@@ -1,10 +1,10 @@
 import emilie2 from './../assets/emilie-2.jpg';
 import emilie3 from '../assets/emilie-3.jpg';
 import emilie4 from '../assets/emilie-4.jpg';
-import Button from '../components/UI/Button';
-import cv from '../assets/CV.pdf';
+import Button from './UI/Button';
+import Pdf from './../assets/resume.pdf';
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
     return (
         <div className="about-me">
                 
@@ -20,7 +20,7 @@ const AboutMe = () => {
                 <p className="paragraph">
                     Otherwise, I'm a cheerful and chipper girl who enjoys spreading the joy of life all around. To me happiness is everything, and this line of work truly makes me happy!
                 </p>
-                <Button link={cv} download>
+                <Button link={Pdf} download>
                     <i className="fas fa-file-download"></i>
                     CV
                 </Button>

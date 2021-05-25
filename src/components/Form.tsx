@@ -1,10 +1,10 @@
 import Button from "./UI/Button";
 
 
-const Form = () => {
+const Form: React.FC = () => {
     return (
         <form className="contact-form">
-            <input className="contact-form__input" type="text" placeholder="Kari Nordman"/>
+            <input className="contact-form__input" type="text" placeholder="Kari Nordmann"/>
 
             <input className="contact-form__input" type="text" placeholder="kari@nordman.no"/>
 

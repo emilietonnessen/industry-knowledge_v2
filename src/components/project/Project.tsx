@@ -1,4 +1,10 @@
-const Project = ({image, title, github}) => {
+interface ProjectProps {
+    image: any;
+    title: any;
+    github: any;
+}
+
+const Project: React.FC<ProjectProps> = ({image, title, github}) => {
     return (
         <a href={github} className="project" target="_blank" rel="noopener noreferrer" >
             <img src={image} alt="test" className="project__image"/>

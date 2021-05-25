@@ -1,7 +1,7 @@
 import projects from '../../server/projects';
 import Project from './Project';
 
-const Projects = () => {
+const Projects: React.FC = () => {
     return (
         <div className="projects">
             {projects.map(project => (

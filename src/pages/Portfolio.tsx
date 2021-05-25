@@ -43,7 +43,7 @@ const Portfolio = () => {
         // eslint-disable-line react-hooks/exhaustive-deps
     }, []);
 
-    const searchHandler = (e) => {
+    const searchHandler = (e: any) => {
         setSearchValue(e.target.value);
         setSearchIcon(cross);
         setSearchFocus(true)
@@ -73,7 +73,7 @@ const Portfolio = () => {
                 icon={searchIcon} />
 
             <div className="projects">
-                {projects.map(project => {
+                {projects.map((project: any) => {
                     return (
                         <Project 
                             key={project.id}

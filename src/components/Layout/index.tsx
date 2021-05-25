@@ -11,15 +11,15 @@ const Layout: React.FC<LayoutProps> = ({page, children}) => {
     return (
         <>
         
-        <div className="layout">
-            <div className="wrapper">
-                <Sidebar />
-                <Main page={page} >
-                    {children}
-                </Main>
+            <div className="layout">
+                <div className="wrapper">
+                    <Sidebar />
+                    <Main page={page} >
+                        {children}
+                    </Main>
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
         </>
     );
 }
