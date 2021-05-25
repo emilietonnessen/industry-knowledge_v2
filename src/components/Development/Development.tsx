@@ -1,4 +1,4 @@
-import Courses from '../../components/Courses/Courses';
+import Courses from '../Courses/Courses';
 import Education from './Educations';
 import WorkExperience from './WorkExperiences';
 import Tools from './Tools';
