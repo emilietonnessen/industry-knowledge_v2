@@ -10,7 +10,7 @@ const Sidebar = () => {
     }
 
     return (
-        <nav className="sidebar">
+        <nav className="sidebar navigation">
             <Brand />
             {/* <Menu  isMenuOpen={isMenuOpen ? true : false } /> */}
             <nav className={isMenuOpen ? 'menu' : 'menu menu-open' }>

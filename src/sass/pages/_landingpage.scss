@@ -1,19 +1,41 @@
+// Landingpage ----------------------------------------
+.landingpage {
+    display: flex;
+    align-items: center;
+    position: relative;
 
+    @include respond(laptop) {
+        min-height: unset;
+    }
+
+    @include respond(mobile-lg) {
+        display: grid;
+        grid-template-columns: 1fr 35%;
+        grid-template-rows: 0 1fr;
+        margin-top: 5vh;
+    } 
+
+    @include respond(mobile-lg) {
+        //grid-template-columns: 1fr;
+        padding: 0 !important;
+        box-sizing: border-box;
+    }  
+}
 
 .hero {
     flex: 0 0 70%;
     padding-right: 3rem;
     z-index: 10;
 
-    @media only screen and (max-width: $bp-desktop) {
+    @include respond(desktop) {
         flex: 0 0 75%;
     }
 
-    @media only screen and (max-width: $bp-tab-port) {
+    @include respond(tablet-port) {
         flex: 0 0 70%;
     }
 
-    @media only screen and (max-width: $bp-mobile-lg) {
+    @include respond(mobile-lg) {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
         padding-right: 0;
@@ -24,11 +46,11 @@
         text-transform: uppercase;
         line-height: 1.2;
         
-        @media only screen and (max-width: $bp-lap-lg) {
+        @include respond(laptop-lg) {
             font-size: clamp(5rem, 4vw, 7.5rem);
         }
 
-        @media only screen and (max-width: $bp-mobile-lg) {
+        @include respond(mobile-lg) {
             font-size: clamp(3rem, 8vw, 6rem);
         }
     }
@@ -40,17 +62,17 @@
         letter-spacing: 8px;
         margin-bottom: 3rem;
 
-        @media only screen and (max-width: $bp-lap-lg) {
+        @include respond(laptop-lg) {
             margin-bottom: 2rem;
             letter-spacing: 5px;
         }
 
-        @media only screen and (max-width: $bp-tab-port) {
+        @include respond(tablet-port) {
             font-size: 2.5rem;
             letter-spacing: 3px;
         }
 
-        @media only screen and (max-width: $bp-mobile-lg) {
+        @include respond(mobile-lg) {
             font-size: clamp(1.8rem, 5vw, 2.5rem);
         }
     }
@@ -61,11 +83,11 @@
         line-height: 1.6;
         margin-bottom: 2rem;
 
-        @media only screen and (max-width: $bp-lap-lg) {
+        @include respond(laptop-lg) {
             font-size: 2rem;
         }
 
-        @media only screen and (max-width: $bp-tab-port) {
+        @include respond(tablet-port) {
             font-size: 1.8rem;
             //letter-spacing: 3px;
         }
@@ -75,7 +97,7 @@
 .profile {
     position: relative;
 
-    @media only screen and (max-width: $bp-mobile-lg) {
+    @include respond(mobile-lg) {
         position: absolute;
         
         grid-column: 1 / 2;
@@ -94,7 +116,7 @@
             box-shadow: 0 .3rem 2rem rgba($color-black, .3);
             transition: ease-in-out .3s;
 
-            @media only screen and (max-width: $bp-mobile-lg) {
+            @include respond(mobile-lg) {
                 //display: none;
             }
 
@@ -111,13 +133,13 @@
             width: 40rem;
             z-index: 1;
 
-            /* @media only screen and (max-width: $bp-desktop) {
+            /* @include respond(desktop) {
                 width: 30rem;
                 top: -15rem;
                 right: -10rem;
             }
 
-            @media only screen and (max-width: $bp-lap) {
+            @include respond(laptop) {
                 right: -5rem;
             }
 
@@ -127,12 +149,12 @@
                 right: -3rem;
             }
 
-            @media only screen and (max-width: $bp-tab-port) {
+            @include respond(tablet-port) {
                 top: -15rem;
                 right: -3rem;
             }
 
-            @media only screen and (max-width: $bp-mobile-lg) {
+            @include respond(mobile-lg) {
                 display: none;
             } */
         }

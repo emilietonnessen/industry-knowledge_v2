@@ -5,10 +5,9 @@ import {Helmet} from "react-helmet";
 
 interface LayoutProps {
     children: React.ReactNode;
-    page: "landingpage" | "portfolio" | "about" | "contact";
 }
 
-const Layout: React.FC<LayoutProps> = ({page, children}) => {
+const Layout: React.FC<LayoutProps> = ({children}) => {
     return (
         <>
             <Helmet>

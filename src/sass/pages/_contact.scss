@@ -1,4 +1,21 @@
+.contact {
 
+
+    min-height: 100vh;
+
+    
+
+    &__box {
+        display: flex;
+        margin-top: 10rem;
+        align-items: center;
+
+        @include respond(mobile-lg) {
+            margin-top: 5rem;
+            flex-direction: column;
+        }
+    } 
+}
 
 .illustration {
     flex: 0 0 40%;

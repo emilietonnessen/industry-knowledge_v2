@@ -19,7 +19,7 @@ const App: React.FC = () => {
     console.log("[projects]", projects);
 
     return (
-        <Layout page="landingpage">
+        <Layout>
             <Landingpage />
             <Portfolio />
             <About />
