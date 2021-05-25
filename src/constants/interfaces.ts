@@ -12,6 +12,7 @@ export interface Project {
     github: string;
     school: null | boolean;
     languages: string[];
+    thumbnail: string;
 }
 
 

@@ -1,11 +1,11 @@
 import projects from '../../server/projects';
-import Project from './Project';
+import ProjectCard from './ProjectCard';
 
 const Projects: React.FC = () => {
     return (
         <div className="projects">
             {projects.map(project => (
-                <Project 
+                <ProjectCard 
                     key={project.id}
                     image={project.thumbnail}
                     title={project.name}

@@ -4,7 +4,7 @@ interface ProjectProps {
     github: any;
 }
 
-const Project: React.FC<ProjectProps> = ({image, title, github}) => {
+const ProjectCard: React.FC<ProjectProps> = ({image, title, github}) => {
     return (
         <a href={github} className="project" target="_blank" rel="noopener noreferrer" >
             <img src={image} alt="test" className="project__image"/>
@@ -13,4 +13,4 @@ const Project: React.FC<ProjectProps> = ({image, title, github}) => {
     );
 }
 
-export default Project;
+export default ProjectCard;
