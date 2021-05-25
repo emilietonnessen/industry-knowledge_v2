@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react";
+
 import Layout from "./components/Layout";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -9,20 +10,21 @@ import projectsArray from './server/projects';
 
 
 const App: React.FC = () => {
-    const [projects, setProjects]: any = useContext(ProjectsContext);
 
+    // State
+    const [projects, setProjects] = useContext(ProjectsContext); 
+    
+    // Set projects array to projects state
     useEffect(() => {
         setProjects(projectsArray);
     }, [projects, setProjects]);
 
 
-    console.log("[projects]", projects);
-
     return (
-        <Layout>
+        <Layout>        
             <Landingpage />
-            <Portfolio />
-            <About />
+            <Portfolio  />
+            <About  />
             <Contact />
         </Layout>
     );

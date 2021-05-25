@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import Brand from './Brand';
 import Media from './SocialMediaLinks';
 
@@ -12,26 +13,27 @@ const Sidebar = () => {
     return (
         <nav className="sidebar navigation">
             <Brand />
+            
             {/* <Menu  isMenuOpen={isMenuOpen ? true : false } /> */}
             <nav className={isMenuOpen ? 'menu' : 'menu menu-open' }>
                 <ul className="menu__list">
-                    <li className="menu__item" >
-                        <a href="#portfolio" className="menu__link" onClick={() => openMenuHandler()}>
+                    <li className="menu__item" onClick={() => openMenuHandler()}>
+                        <Link activeClass="menu__item--active" to="portfolio" spy={true} smooth={true} duration={500} className="menu__link">
                             <i className="fas fa-palette"></i> 
                             Portfolio
-                        </a>
+                        </Link>
                     </li>
                     <li className="menu__item" onClick={() => openMenuHandler()}>
-                        <a href="#about" className="menu__link">
+                        <Link activeClass="menu__item--active" to="about" spy={true} smooth={true} duration={500} className="menu__link">
                             <i className="fas fa-user"></i> 
                             about
-                        </a>
+                        </Link>
                     </li>
                     <li className="menu__item" onClick={() => openMenuHandler()}>
-                        <a href="#contact" className="menu__link">
+                        <Link activeClass="menu__item--active" to="contact" spy={true} smooth={true} duration={500} className="menu__link">
                             <i className="fas fa-envelope"></i> 
                             contact
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

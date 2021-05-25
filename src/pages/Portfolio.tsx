@@ -2,6 +2,7 @@ import Project from '../components/project/Project';
 import Search from '../components/Search';
 import projectsJSON from '../server/projects';
 import { useEffect, useState } from 'react';
+import { Element } from 'react-scroll';
 //import Modal from '../components/Modal.tsx';
 
 
@@ -59,7 +60,8 @@ const Portfolio = () => {
     const onBlur = () => setSearchFocus(false);
 
     return (
-        <div className="portfolio" id="portfolio">
+        <Element name="portfolio" className="portfolio">
+            {/* <div  id="portfolio"> */}
             <h2 className="headline headline--primary">
                 Portfolio
                 <span></span>
@@ -88,8 +90,11 @@ const Portfolio = () => {
                 headline="Risør Klatreklubb"
                 demo="livelink"
                 github="github" /> */}
-        </div>
+        {/* </div> */}
+        </Element>
     );
+        
+        
 }
 
 export default Portfolio;

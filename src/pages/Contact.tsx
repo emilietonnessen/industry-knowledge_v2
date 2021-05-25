@@ -1,10 +1,12 @@
+import { Element } from 'react-scroll';
 import illustration from '../assets/mail.svg'
 import Form from '../components/Form'
 import Feedback from '../components/UI/Feedback'
 
 const Contact = () => {
     return (
-        <div className="contact" id="contact">
+        <Element name="contact" className="contact">
+            <div>
             <h2 className="headline headline--primary">Contact Me <span></span></h2>
 
             <Feedback type="warning"
@@ -21,6 +23,8 @@ const Contact = () => {
 
             
         </div>
+        </Element>
+        
     );
 }
 
