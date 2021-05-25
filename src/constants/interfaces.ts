@@ -2,6 +2,7 @@
 export interface Projects {
     projects: Project[];
 }
+
 export interface Project {
     id: number;
     slug: string;
@@ -11,4 +12,12 @@ export interface Project {
     github: string;
     school: null | boolean;
     languages: string[];
+}
+
+
+
+// Layout ----------------------------------
+export interface NavigationMenuProps {
+    isMenuOpen: string | boolean;
+    onClick: () => void;
 }

@@ -1,6 +1,5 @@
-const Media = () => {
-    return (
-        <div className="media-links">
+const SocialMedia: React.FC = () => (
+    <div className="media-links">
         <a href="https://github.com/Emizzari" className="media-links__link" target="_blank" rel="noreferrer">
             <i className="fab fa-github"></i>
         </a>
@@ -8,7 +7,7 @@ const Media = () => {
             <i className="fab fa-linkedin"></i>
         </a>
     </div>
-    )
-}
+);
 
-export default Media;
+
+export default SocialMedia;

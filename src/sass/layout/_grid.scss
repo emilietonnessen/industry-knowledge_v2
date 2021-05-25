@@ -2,7 +2,7 @@
 .layout {
     display: grid;
     grid-template-columns: 35rem 1fr;
-    grid-template-rows: minmax(100vh, 1fr);
+    grid-template-rows: minmax(100vh, 1fr) max-content;
 }
 
 
@@ -27,6 +27,14 @@
     & > * {
         padding: 20rem 0;
     }
+}
+
+
+
+// Footer ---------------------------------------------
+.footer {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 
