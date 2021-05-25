@@ -16,8 +16,13 @@ export interface Project {
 
 
 
+
 // Layout ----------------------------------
 export interface NavigationMenuProps {
     isMenuOpen: string | boolean;
     onClick: () => void;
+}
+
+export interface MainProps {
+    children: React.ReactNode;
 }

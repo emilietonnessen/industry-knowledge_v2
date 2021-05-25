@@ -82,6 +82,20 @@ const projects = [
         'school': null,
         'languages': ['HTML', 'CSS']
     },
+    {
+        'id': 8,
+        'slug': 'holidaze',
+        'name': 'Holidaze',
+        'description': 'lorem ipsum',
+        'thumbnail': 'https://www.tonnessen.com/assets/holidaze.png',
+        'link': 'https://holidaze-theta.vercel.app/',
+        'github': 'https://github.com/emilietonnessen/Holidaze',
+        'school': {
+            'grade': 'waiting for grading',
+            'brief': 'This was a School assignment.'
+        },
+        'languages': ['HTML', 'CSS']
+    },
 ]
 
 export default projects;

@@ -1,6 +1,5 @@
-interface MainProps {
-    children: React.ReactNode;
-}
+import { MainProps } from "../../constants/interfaces";
+
 
 const Main: React.FC<MainProps> = ({children}) => (
     <main className={`main`}>

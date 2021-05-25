@@ -1,0 +1,167 @@
+.hero {
+    // Container ----------------------------------------------
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    column-gap: 5rem;
+
+    z-index: 10;
+
+    @include respond(desktop) {
+        flex: 0 0 75%;
+    }
+
+    @include respond(tablet-port) {
+        flex: 0 0 70%;
+    }
+
+    @include respond(mobile-lg) {
+        padding-right: 0;
+    } 
+
+
+
+
+
+    // Text Content --------------------------------------------
+    &__copywrite {
+        align-self: center;
+    }
+
+
+    &__headline {
+        font-size: 7.5rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        
+        @include respond(laptop-lg) {
+            font-size: clamp(5rem, 4vw, 7.5rem);
+        }
+
+        @include respond(mobile-lg) {
+            font-size: clamp(3rem, 8vw, 6rem);
+        }
+    }
+
+
+
+    &__job-title {
+        text-transform: uppercase;
+        color: $color-primary;
+        font-size: 3rem;
+        letter-spacing: 8px;
+        margin-bottom: 3rem;
+
+        @include respond(laptop-lg) {
+            margin-bottom: 2rem;
+            letter-spacing: 5px;
+        }
+
+        @include respond(tablet-port) {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        @include respond(mobile-lg) {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+        }
+    }
+
+
+
+    &__text {
+        font-size: 2.2rem;
+        font-weight: 200;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+
+        @include respond(laptop-lg) {
+            font-size: 2rem;
+        }
+
+        @include respond(tablet-port) {
+            font-size: 1.8rem;
+            //letter-spacing: 3px;
+        }
+    }
+
+
+
+
+
+
+
+    // Graphic Content ----------------------------------------
+    &__graphics {
+        position: relative;
+
+        @include respond(mobile-lg) {
+            position: absolute;
+            
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            width: 22rem;
+            transform: translateY(12rem) translateX(0rem);
+        } 
+    }
+
+
+    &__profile-image {
+        width: 100%;
+        max-width: 40rem;
+        max-height: 40rem;
+
+        border-radius: 100%;
+        z-index: 10;
+        position: relative;
+        box-shadow: 0 .3rem 2rem rgba($color-black, .3);
+        transition: ease-in-out .3s;
+
+        @include respond(mobile-lg) {
+            //display: none;
+        }
+
+        &:hover {
+            transform: rotate(10deg);
+            animation: rotate 1s;
+        }
+    }
+
+
+    &__logo {
+        position: absolute;
+        top: -27rem;
+        right: 33rem;
+        width: 40rem;
+        z-index: 1;
+
+        /* @include respond(desktop) {
+            width: 30rem;
+            top: -15rem;
+            right: -10rem;
+        }
+
+        @include respond(laptop) {
+            right: -5rem;
+        }
+
+        @media only screen and (max-width: $bp-tab-land) {
+            width: 25rem;
+            top: -15rem;
+            right: -3rem;
+        }
+
+        @include respond(tablet-port) {
+            top: -15rem;
+            right: -3rem;
+        }
+
+        @include respond(mobile-lg) {
+            display: none;
+        } */
+    }
+}
