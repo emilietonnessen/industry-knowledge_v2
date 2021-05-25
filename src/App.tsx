@@ -1,3 +1,4 @@
+import Layout from "./components/Layout";
 import Footer from "./components/Layout/Footer"
 import Sidebar from "./components/Layout/nav/Sidebar";
 import About from "./pages/About";
@@ -7,15 +8,14 @@ import Portfolio from "./pages/Portfolio";
 
 const App: React.FC = () => {
     return (
-        <>
-            <div className="app">
-                <Sidebar />
-                <Landingpage />
-                <Portfolio />
-                <About />
-                <Contact />
-            </div>
-            <Footer />
+        <>  
+            <Layout page="landingpage">
+                    <Landingpage />
+                    <Portfolio />
+                    <About />
+                    <Contact />
+            </Layout>
+            
         </>
     );
 }
