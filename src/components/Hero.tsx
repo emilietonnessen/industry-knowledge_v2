@@ -1,6 +1,6 @@
-import Button from './UI/Button';
 import logo from '../assets/logo.png';
 import emilie1 from '../assets/emilie-1-2.jpg'
+import { Link } from 'react-scroll';
 
 const Hero: React.FC = () => {
     return (
@@ -11,7 +11,10 @@ const Hero: React.FC = () => {
                 <h1 className="hero__headline">Emilie Tønnessen</h1>
                 <h2 className="hero__job-title">Junior Frontend Developer</h2>
                 <p className="hero__text">I implement visual and interactive elements to websites and applications. I make your design come alive!</p>
-                <Button link="#portfolio">View my portfolio</Button>
+                <Link to="portfolio" spy={true} smooth={true} duration={500}>
+                    <button className="btn btn--primary btn--cta">View my portfolio</button>
+                </Link>
+                
             </div>
 
 
