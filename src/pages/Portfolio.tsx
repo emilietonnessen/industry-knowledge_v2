@@ -15,19 +15,20 @@ const Portfolio: React.FC = () => {
     // Variables
     let projectCard;
 
-
     if (projects) {
         projectCard = projects.map((project: Project) => (
             <ProjectCard 
                 key={project.id}
+                data={project}
                 image={project.thumbnail}
-                title={project.name}
-                github={project.github} />
-        ))
+                title={project.name} />
+        ));
     }
 
+    console.log("[projects]", projects);
+
     return (
-        <Element name="portfolio" className="portfolio">
+        <Element name="portfolio" className="portfolio" id="portfolio">
             <h2 className="headline headline--primary">
                 Portfolio
                 <span></span>

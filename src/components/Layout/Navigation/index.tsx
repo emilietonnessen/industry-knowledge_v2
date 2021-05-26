@@ -3,6 +3,7 @@ import Brand from './Brand';
 import Menu from './Menu';
 import SocialMedia from './SocialMedia';
 
+
 const Navigation: React.FC = () => {
     const [isMenuOpen, setMenuOpen] = useState<string | boolean>(false);
 
@@ -14,11 +15,11 @@ const Navigation: React.FC = () => {
         <nav className="navigation">
 
             <Brand />
-            
+                
             <Menu onClick={openMenuHandler} isMenuOpen={isMenuOpen} />
 
             <SocialMedia />
-            
+                
             {/* Hamburger Icon */}
             <div className="nav-icon" onClick={() => openMenuHandler()}>
                 <button className="nav-icon__button"></button>

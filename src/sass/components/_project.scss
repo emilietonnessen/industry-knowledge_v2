@@ -1,3 +1,4 @@
+// Projects Container ----------------------------------
 .projects {
     display: grid;
     //grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -14,19 +15,29 @@
     }
 }
 
-.project {
+
+
+// Project Card -----------------------------------------
+.project-card {
     display: flex;
     flex-direction: column;
     color: inherit;
     text-decoration: inherit;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: none;
 
     &__title{
         z-index: 20;
         align-self: start;
         background-color: rgba($color-grey-dark-2, 1);
         font-weight: 300;
+        font-family:$font-family-default;
         padding: 1rem 3rem;
         transform: translateY(-50%) translateX(-10%);
+        font-size: 1.8rem;
     }
 
     &__image {
@@ -49,5 +60,36 @@
             transform: translateY(1.5rem) scale(.95);
             box-shadow: $box-shadow-active;
         }
+    }
+}
+
+
+
+// Project Modal -----------------------------------------
+.project {
+    padding: 5rem;
+    display: grid;
+    max-width: 95vw;
+    grid-template-columns: 1fr max-content;
+    gap: 5rem;
+}
+
+.project-content {
+
+}
+
+.project-graphic {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    &__image {
+        max-width: 40rem;
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }

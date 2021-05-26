@@ -7,6 +7,8 @@ import Landingpage from "./pages/Landingpage";
 import Portfolio from "./pages/Portfolio";
 import ProjectsContext from './context/ProjectsContext';
 import projectsArray from './server/projects';
+import Project from "./components/Project";
+import { SelectedProjectsProvider } from "./context/SelectedProjectContext";
 
 
 const App: React.FC = () => {
@@ -21,12 +23,16 @@ const App: React.FC = () => {
 
 
     return (
-        <Layout>        
-            <Landingpage />
-            <Portfolio  />
-            <About  />
-            <Contact />
-        </Layout>
+        <SelectedProjectsProvider>
+            <Layout>        
+                <Landingpage />
+                <Portfolio  />
+                <About  />
+                <Contact />
+            </Layout>
+
+            <Project />
+        </SelectedProjectsProvider>
     );
 }
 

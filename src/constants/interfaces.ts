@@ -27,3 +27,19 @@ export interface NavigationMenuProps {
 export interface MainProps {
     children: React.ReactNode;
 }
+
+
+
+
+// Portfolio
+
+export interface IconProps {
+    color?: string;
+    classes?: string;
+}
+export interface ModalProps {
+    id: string; 
+    link: string;
+    classes: string;
+    children: React.ReactNode;
+}
