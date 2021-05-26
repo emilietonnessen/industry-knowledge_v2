@@ -3,6 +3,8 @@ import emilie3 from '../assets/emilie-3.jpg';
 import emilie4 from '../assets/emilie-4.jpg';
 import Button from './UI/Button';
 import Pdf from './../assets/resume.pdf';
+import Educations from './Development/Educations';
+import WorkExperiences from './Development/WorkExperiences';
 
 const AboutMe: React.FC = () => {
     return (
@@ -31,6 +33,9 @@ const AboutMe: React.FC = () => {
                 <img src={emilie3} alt="Emilie 2" className="gallery__img gallery__img--2"/>
                 <img src={emilie4} alt="Emilie 3" className="gallery__img gallery__img--3"/>
             </div>
+
+            <Educations />
+            <WorkExperiences />
         </div>
     )
 }
