@@ -15,13 +15,13 @@ const Menu: React.FC<NavigationMenuProps> = ({isMenuOpen, onClick}) => (
             <li className="menu__item" onClick={onClick}>
                 <Link activeClass="menu__item--active" to="about" spy={true} smooth={true} duration={500} className="menu__link">
                     <i className="fas fa-user"></i> 
-                    about
+                    about me
                 </Link>
             </li>
             <li className="menu__item" onClick={onClick}>
                 <Link activeClass="menu__item--active" to="contact" spy={true} smooth={true} duration={500} className="menu__link">
                     <i className="fas fa-envelope"></i> 
-                    contact
+                    contact me
                 </Link>
             </li>
         </ul>
