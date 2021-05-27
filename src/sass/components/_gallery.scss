@@ -29,12 +29,12 @@
         &:hover,
         &:focus {
             z-index: 100;
-            transform: scale(1.2);
+            transform: scale(1.1);
             box-shadow: 0 .5rem 2rem rgba($color-black, .3);
         }
 
         &--1 {
-            top: 30rem;
+            bottom: 0;
             left: 15rem;
             z-index: 30;
 
@@ -57,7 +57,7 @@
 
         &--2 {
             top: 0;
-            right: -5rem;
+            right: 0;
             z-index: 10;
 
             @include respond(tablet-land) {
@@ -79,7 +79,7 @@
 
         &--3 {
             top: 4rem;
-            left: 8rem;
+            left: 0;
             z-index: 20;
 
             @include respond(tablet-port) {

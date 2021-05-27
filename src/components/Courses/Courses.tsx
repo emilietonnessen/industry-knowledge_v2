@@ -11,14 +11,17 @@ const Courses = () => {
             <h4 className="headline headline--tertiary courses__headline">courses</h4>
 
             {/* Looping through the Courses Array and displaying relevant information */}
-            {coursesArray.map(course => (
-                <Course 
-                    key={course.id}
-                    title={course.name}
-                    courseLink={course.link}
-                    certificate={course.certificate}
-                    progress={course.progress} />
-            ))}
+            <div className="course__container">
+                {coursesArray.map(course => (
+                    <Course 
+                        key={course.id}
+                        title={course.name}
+                        courseLink={course.link}
+                        certificate={course.certificate}
+                        progress={course.progress} />
+                ))}
+            </div>
+            
         </section>
     );
 }
