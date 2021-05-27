@@ -11,8 +11,9 @@
 
     z-index: 10;
 
-
-
+    @include respond(tablet-land) {
+        grid-template-columns: 1fr;
+    }
 
 
 
@@ -21,6 +22,10 @@
     // Text Content --------------------------------------------
     &__copywrite {
         align-self: center;
+
+        @include respond(tablet-land) {
+            grid-row: 2 / 3;
+        }
     }
 
 
@@ -28,8 +33,8 @@
         font-size: 7.5rem;
         text-transform: uppercase;
         line-height: 1.2;
-        
-        @include respond(laptop-lg) {
+
+        @include respond(desktop) {
             font-size: clamp(5rem, 4vw, 7.5rem);
         }
 
@@ -37,8 +42,6 @@
             font-size: clamp(3rem, 8vw, 6rem);
         }
     }
-
-
 
     &__job-title {
         text-transform: uppercase;
@@ -50,6 +53,10 @@
         @include respond(laptop-lg) {
             margin-bottom: 2rem;
             letter-spacing: 5px;
+        }
+
+        @include respond(laptop) {
+            font-size: 2.8rem;
         }
 
         @include respond(tablet-port) {
@@ -90,6 +97,11 @@
     &__graphics {
         position: relative;
 
+        @include respond(tablet-land) {
+            grid-row: 1 / 2;
+            justify-self: end;
+        }
+
         @include respond(mobile-lg) {
             position: absolute;
             
@@ -112,8 +124,25 @@
         box-shadow: 0 .3rem 2rem rgba($color-black, .3);
         transition: ease-in-out .3s;
 
+        @include respond(desktop) {
+            max-width: 32rem;
+        }
+
         @include respond(laptop) {
             max-width: 30rem;
+        }
+
+        @include respond(tablet-land) {
+            position: absolute;
+            bottom: -3rem;
+            right: 0;
+            width: 25rem;
+            height: 25rem;
+        }
+
+        @include respond(mobile-lg) {
+            bottom: 15rem;
+            right: 0;
         }
 
         &:hover {
@@ -125,33 +154,36 @@
 
     &__logo {
         position: absolute;
-        top: -27rem;
+        top: -18rem;
         right: 33rem;
-        width: 40rem;
+        width: 35rem;
         z-index: 1;
 
+        @include respond(desktop) {
+            width: 30rem;
+            top: -18rem;
+            right: 24rem;
+        }
 
         @include respond(laptop) {
             width: 30rem;
-            top: -22rem;
+            top: -18rem;
+            right: 28rem;
+        }
+
+        @include respond(tablet-land) {
+            width: 25rem;
+            top: -25rem;
             right: 25rem;
         }
 
-        /*
-
-        @media only screen and (max-width: $bp-tab-land) {
-            width: 25rem;
-            top: -15rem;
-            right: -3rem;
-        }
-
-        @include respond(tablet-port) {
-            top: -15rem;
-            right: -3rem;
-        }
-
         @include respond(mobile-lg) {
+            top: -35rem;
+            right: 26rem;
+        }  
+
+        @include respond(mobile-sm) {
             display: none;
-        } */
+        }
     }
 }

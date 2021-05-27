@@ -1,18 +1,18 @@
 // Projects Container ----------------------------------
 .projects {
     display: grid;
-    //grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-template-columns: repeat(3, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     gap: 5rem;
     margin-top: 10rem;
 
     @include respond(tablet-port) {
-        grid-template-columns: repeat(2, minmax(25rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     }
 
-    @include respond(mobile-lg) {
-        grid-template-columns: 1fr;
+    @include respond(mobile) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
+
 }
 
 

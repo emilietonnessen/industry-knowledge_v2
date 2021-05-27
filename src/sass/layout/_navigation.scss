@@ -103,6 +103,8 @@
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
+    
+
 
     // <ul> List 
     &__list {
@@ -202,7 +204,8 @@
     &__link,
     &__link:link,
     &__link:visited {
-        display: block;
+        display: flex;
+        align-items: center;
         color: $color-white;
         text-decoration: none;
         text-transform: uppercase;
@@ -226,9 +229,21 @@
         }
 
         & > svg {
-            width: 4rem;
-            height: 4rem;
+            width: 2.5rem;
+            height: 2.5rem;
             margin-right: 3rem;
+
+            @include respond(laptop-lg) {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 1.5rem;
+            }
+
+            @include respond(mobile-lg) {
+                width: 4rem;
+                height: 4rem;
+                margin-right: 3rem;
+            }
             
             & > path {
                 fill: currentColor;
