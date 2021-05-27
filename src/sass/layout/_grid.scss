@@ -3,6 +3,16 @@
     display: grid;
     grid-template-columns: 35rem 1fr;
     grid-template-rows: minmax(100vh, 1fr) max-content;
+
+    @include respond(laptop-lg) {
+        grid-template-columns: 30rem 1fr;
+    }
+
+    @include respond(laptop) {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        margin-top: 8rem;
+    }
 }
 
 
@@ -18,9 +28,10 @@
 .main {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    justify-self: center;
 
     display: grid;
-    grid-template-columns: 7rem 1fr 7rem;
+    grid-template-columns: 7rem minmax(10rem, 142.5rem) 7rem;
     grid-template-rows: repeat(4, minmax(100vh, max-content));
     margin-bottom: 20rem;
 
@@ -43,12 +54,6 @@
 .landingpage {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-
-
-    @include respond(laptop) {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-    }
 }
 
 
@@ -57,11 +62,6 @@
 .portfolio {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
-    @include respond(laptop) {
-        grid-column: 1 / -1;
-        grid-row: 3 / 4;
-    }
 }
 
 
@@ -70,11 +70,6 @@
 .about {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-
-    @include respond(laptop) {
-        grid-column: 1 / -1;
-        grid-row: 4 / 5;
-    }
 }
 
 
@@ -83,9 +78,4 @@
 .contact {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
-
-    @include respond(laptop) {
-        grid-column: 1 / -1;
-        grid-row: 5 / 6;
-    }
 }

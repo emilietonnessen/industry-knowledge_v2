@@ -11,17 +11,8 @@
 
     z-index: 10;
 
-    @include respond(desktop) {
-        flex: 0 0 75%;
-    }
 
-    @include respond(tablet-port) {
-        flex: 0 0 70%;
-    }
 
-    @include respond(mobile-lg) {
-        padding-right: 0;
-    } 
 
 
 
@@ -121,8 +112,8 @@
         box-shadow: 0 .3rem 2rem rgba($color-black, .3);
         transition: ease-in-out .3s;
 
-        @include respond(mobile-lg) {
-            //display: none;
+        @include respond(laptop) {
+            max-width: 30rem;
         }
 
         &:hover {
@@ -139,15 +130,14 @@
         width: 40rem;
         z-index: 1;
 
-        /* @include respond(desktop) {
-            width: 30rem;
-            top: -15rem;
-            right: -10rem;
-        }
 
         @include respond(laptop) {
-            right: -5rem;
+            width: 30rem;
+            top: -22rem;
+            right: 25rem;
         }
+
+        /*
 
         @media only screen and (max-width: $bp-tab-land) {
             width: 25rem;

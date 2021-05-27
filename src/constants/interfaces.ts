@@ -20,12 +20,19 @@ export interface Project {
 
 // Layout ----------------------------------
 export interface NavigationMenuProps {
-    isMenuOpen: string | boolean;
     onClick: () => void;
 }
 
 export interface MainProps {
     children: React.ReactNode;
+}
+
+
+// Navigation
+export interface NavigationHamburgerIconProps {
+    onClick: () => void;
+    checked: boolean;
+    onChange: () => void;
 }
 
 

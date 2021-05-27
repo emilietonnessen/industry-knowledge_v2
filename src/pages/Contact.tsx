@@ -9,7 +9,7 @@ const Contact = () => {
             {/* Section Headline */}
             <h2 className="headline headline--primary">Contact Me <span></span></h2>
             
-            {/* Contact Form/Info */}
+            {/* Contact Info */}
             <div className="contact__container">
                 <ContactInfo/>
                 <img src={illustration} alt="Illustration" className="contact__illustration"/>

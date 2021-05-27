@@ -1,3 +1,4 @@
+// Container/Navigation Bar ---------------------------------------
 .navigation {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
@@ -14,14 +15,12 @@
     flex-direction: column;
 
     @include respond(laptop-lg) {
-        width: 25rem;
+        width: 30rem;
     }
-
-
 
     @include respond(laptop) {
         flex-direction: row;
-        //grid-column: 1 / -1;
+        grid-column: 1 / -1;
         grid-row: 1 / 2;
         height: unset;
         width: 100%;
@@ -34,20 +33,21 @@
 
         display: grid;
         grid-template-columns: max-content 1fr max-content;
-        grid-template-rows: 10rem;
+        grid-template-rows: 8rem;
         align-items: center;
     }
 
     @include respond(mobile-lg) {
-        display: flex;
-        justify-content: space-between;
-    }
+        height: unset;
+        background-color: transparent;
+        box-shadow: none; 
 
-    @media only screen and (max-width: $bp-mobile-lg) {
-        height: 10rem;
     }
 }
 
+
+
+// Brand -------------------------------------------------------
 .brand {
     cursor: pointer;
     padding: 5rem;
@@ -60,6 +60,7 @@
 
     @include respond(mobile-lg) {
         padding: 1.5rem;
+        display: none;
     }
 
     &__logo {
@@ -74,6 +75,10 @@
     }
 }
 
+
+
+
+// Menu ------------------------------------------------------
 .menu {
     margin-top: 3rem;
     margin-bottom: auto;
@@ -81,23 +86,25 @@
     
     @include respond(laptop) {
         margin: 0;
-        height: 10rem;
+        height: 100%;
     }
 
     @include respond(mobile-lg) {
-        position: absolute;
-        top: 0;
-        right: -100vw;
-        height: 100vh;
-        background-color: $color-grey-dark-2;
-        z-index: 200;
-        width: 100vw;
+        z-index: 1500;
+        position: fixed;
+        display: block;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        opacity: 1;
+        height: 100vh;
+        width: 0;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
+
+    // <ul> List 
     &__list {
         list-style: none;
 
@@ -106,7 +113,6 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            gap: 3rem;
         }
 
         @include respond(mobile-lg) {
@@ -114,15 +120,25 @@
             height: unset;
             justify-content: center;
             align-items: center;
-            width: 100%;
+
+            @include centerElement;
+            height: 50%;
+            width: 50%;
+            z-index: 1500;
+            transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: none;
+        }
+
+        @include respond(mobile) {
+            width: 90%;
         }
     }
 
+
+    // <li> List Item
     &__item {
         transition: all .2s;
         position: relative;
-
-        
 
         &:not(:last-child) {
             margin-bottom: 2rem;
@@ -131,17 +147,21 @@
         @include respond(laptop) {
             margin-bottom: 0 !important;
             height: 100%;
-            line-height: 10rem;
         }
 
         @include respond(mobile-lg) {
             width: 100%;
             justify-content: center;
             align-items: center;
+            max-height: 10rem;
         }
 
         &--active {
             background-color: $color-primary;
+
+            @include respond(mobile-lg) {
+                background-color: $color-primary-dark;
+            }
         }
     }
 
@@ -155,8 +175,12 @@
         background-color: $color-primary;
         transform: scaleY(0);
         transition: transform .2s,
-            width .4s cubic-bezier(1, 0, 0, 1) .2s,
-            background-color .1s;
+        width .4s cubic-bezier(1, 0, 0, 1) .2s,
+        background-color .1s;
+
+        @include respond(mobile-lg) {
+            background-color: $color-primary-dark;
+        }
     }
 
 
@@ -170,9 +194,14 @@
         background-color: lighten($color-primary, 10);
     }
 
+
+
+
+
+    // <a> Link within the list item
     &__link,
     &__link:link,
-    &__link:active {
+    &__link:visited {
         display: block;
         color: $color-white;
         text-decoration: none;
@@ -186,7 +215,8 @@
         @include respond(laptop) {
             display: flex;
             padding: 0 3rem;
-            line-height: 10rem;
+            height: 100%;
+            align-items: center;
         }
 
         @include respond(mobile-lg) {
@@ -195,31 +225,146 @@
             align-items: center;
         }
 
-        & i {
-            margin-right: 2rem;
-            width: $font-size-default;
-            font-size: 1.8rem;
-
-            @include respond(laptop) {
-                align-self: center;
+        & > svg {
+            width: 4rem;
+            height: 4rem;
+            margin-right: 3rem;
+            
+            & > path {
+                fill: currentColor;
             }
+        }
+
+        &--active,
+        &--active:link,
+        &--active:visited {
+            background-color: $color-primary;
 
             @include respond(mobile-lg) {
-                font-size: 2.5rem;
-                margin-right: 4rem;
+                background-color: white;
+                color: $color-primary !important;
             }
         }
+    }
 
-        &--active {
-            background-color: $color-primary;
+
+
+
+    // Hamburger Icon --------------------------------------------
+    &__checkbox {
+        display: none;
+    }
+
+    &__background {
+        display: none;
+
+        @include respond(mobile-lg) {
+            display: block;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            position: fixed;
+            top: 1.1rem;
+            right: 1.1rem;
+            background-image: radial-gradient($color-primary-light, $color-primary-dark);
+            z-index: 1000;
+            transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         }
+    }
+
+    &__button {
+        display: none;
+
+        @include respond(mobile-lg) {
+            display: block;
+            background-color: $color-white;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 2000;
+            box-shadow: 0 1rem 3rem rgba($color-black, .15);
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 25px;
+
+        &,
+        &::before,
+        &::after {
+            width: 3.5rem;
+            height: 1px;
+            background-color: $color-black;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -9px;
+        }
+
+        &::after {
+            top: 9px;
+        }
+    }
+
+
+
+
+    // Functionality ----------------------------------------
+    &__checkbox:checked ~ &__background {
+        transform: scale(52);
+    }
+
+    &__checkbox:checked ~ & {
+        opacity: 1;
+        width: 100%;
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    } 
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked ~ & > &__list{
+        display: flex;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
     }
 }
 
-.menu-open {
-    right: 0;
-}
 
+
+
+// Social Media Links --------------------------------------
 .media-links {
     display: flex;
     justify-content: space-around;
@@ -251,13 +396,15 @@
     }
 }
 
-.nav-icon {
+/* .nav-icon {
     display: none;
     height: 100%;
     align-items: center;
     padding: 0 3rem;
     cursor: pointer;
     z-index: 1000;
+    background-color: $color-grey-dark-2;
+    border-radius: 50%;
     
     @include respond(mobile-lg) {
         display: flex;
@@ -288,4 +435,4 @@
 
     &:hover  &__button::before{transform: translateY(-1.7rem);}
     &:hover  &__button::after{transform: translateY(1.7rem);}
-}
+} */

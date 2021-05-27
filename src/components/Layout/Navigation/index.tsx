@@ -1,30 +1,33 @@
 import { useState } from 'react';
 import Brand from './Brand';
+import HamburgerIcon from './HamburgerIcon';
 import Menu from './Menu';
 import SocialMedia from './SocialMedia';
 
 
 const Navigation: React.FC = () => {
-    const [isMenuOpen, setMenuOpen] = useState<string | boolean>(false);
+    const [checked, setChecked] = useState<boolean>(false);
 
-    const openMenuHandler = () => {
-        setMenuOpen(!isMenuOpen); 
+    const checkedHandler = () => {
+        if (checked === false) setChecked(true);
+        if (checked === true) setChecked(false);
+    }
+
+    const onChangeHandler = () => {
+        return;
     }
 
     return (
         <nav className="navigation">
 
             <Brand />
-                
-            <Menu onClick={openMenuHandler} isMenuOpen={isMenuOpen} />
+
+            <HamburgerIcon  checked={checked} onChange={onChangeHandler} onClick={checkedHandler}/> 
+
+            <Menu onClick={checkedHandler} />
 
             <SocialMedia />
-                
-            {/* Hamburger Icon */}
-            <div className="nav-icon" onClick={() => openMenuHandler()}>
-                <button className="nav-icon__button"></button>
-            </div>
-            
+    
         </nav>
     );
 }

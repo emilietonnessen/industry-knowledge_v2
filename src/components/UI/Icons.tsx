@@ -64,3 +64,13 @@ export const FileDownload: React.FC<interfaces.IconProps> = ({color, classes}) =
 export const Linkedin: React.FC<interfaces.IconProps> = ({color, classes}) => (
     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" className={"svg-inline--fa fa-linkedin fa-w-14 " + classes} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill={color} d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
 );
+
+
+export const User: React.FC<interfaces.IconProps> = ({color, classes}) => (
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" className={"svg-inline--fa fa-user fa-w-14" + classes} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill={color} d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>
+);
+
+
+export const Portfolio: React.FC<interfaces.IconProps> = ({color, classes}) => (
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="palette" className={"svg-inline--fa fa-palette fa-w-16 " + classes} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill={color} d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg>
+);
