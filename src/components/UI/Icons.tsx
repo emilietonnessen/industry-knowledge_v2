@@ -60,3 +60,7 @@ export const ExternalLink: React.FC<interfaces.IconProps> = ({color, classes}) =
 export const FileDownload: React.FC<interfaces.IconProps> = ({color, classes}) => (
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-download" className={"svg-inline--fa fa-file-download fa-w-12 " + classes} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill={color} d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg>
 );
+
+export const Linkedin: React.FC<interfaces.IconProps> = ({color, classes}) => (
+    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" className={"svg-inline--fa fa-linkedin fa-w-14 " + classes} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill={color} d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+);

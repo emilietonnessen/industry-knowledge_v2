@@ -1,15 +1,15 @@
 interface ButtonProps {
     children: React.ReactNode;
-    link: string;
-    download?: boolean;
     type?: "button" | "submit" | "reset" | undefined;
+    theme: "primary" | "github";
+    size: "cta" | "lg" | "md" | "sm";
 }
 
-const Button: React.FC<ButtonProps> = ({children, link, download, type}) => (
-    <button className="btn" type={type}>
-        <a href={link} download={download} >
-            {children}
-        </a>
+const Button: React.FC<ButtonProps> = ({children, theme, size, type}) => (
+    <button className={`btn btn--${theme} btn--${size}`}type={type}>
+
+        {children}
+
     </button>
 );
 

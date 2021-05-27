@@ -1,12 +1,10 @@
 .contact {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content;
+        column-gap: 15rem;
 
-
-    min-height: 100vh;
-
-    
-
-    &__box {
-        display: flex;
         margin-top: 10rem;
         align-items: center;
 
@@ -14,13 +12,9 @@
             margin-top: 5rem;
             flex-direction: column;
         }
-    } 
-}
+    }
 
-.illustration {
-    flex: 0 0 40%;
-
-    &__img {
+    &__illustration {
         width: 100%;
     }
 }
