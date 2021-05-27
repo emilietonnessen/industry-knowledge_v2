@@ -55,3 +55,8 @@ export const Github: React.FC<interfaces.IconProps> = ({color, classes}) => (
 export const ExternalLink: React.FC<interfaces.IconProps> = ({color, classes}) => (
     <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="external-link" className={"svg-inline--fa fa-external-link fa-w-16 " + classes} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill={color} d="M440,256H424a8,8,0,0,0-8,8V464a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V112A16,16,0,0,1,48,96H248a8,8,0,0,0,8-8V72a8,8,0,0,0-8-8H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V264A8,8,0,0,0,440,256ZM500,0,364,.34a12,12,0,0,0-12,12v10a12,12,0,0,0,12,12L454,34l.7.71L131.51,357.86a12,12,0,0,0,0,17l5.66,5.66a12,12,0,0,0,17,0L477.29,57.34l.71.7-.34,90a12,12,0,0,0,12,12h10a12,12,0,0,0,12-12L512,12A12,12,0,0,0,500,0Z"></path></svg>
 );
+
+
+export const FileDownload: React.FC<interfaces.IconProps> = ({color, classes}) => (
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-download" className={"svg-inline--fa fa-file-download fa-w-12 " + classes} role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill={color} d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg>
+);
