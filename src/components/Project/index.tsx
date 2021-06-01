@@ -32,7 +32,7 @@ const Project: React.FC = () => {
         // School Project                
         if (selectedProject.school) {
             schoolProject = ( 
-                <>
+                <div className="project-content__school">
                     <h4 className="project-content__course-title">{selectedProject.school.course}</h4> 
                     <li className="project-content__grade">
                         
@@ -40,7 +40,7 @@ const Project: React.FC = () => {
                         {selectedProject.school.grade}
                     </li>
                     <p className="paragraph">{selectedProject.school.brief}</p> 
-                </>
+                </div>
             );
         }
     }

@@ -67,16 +67,45 @@
 
 // Project Modal -----------------------------------------
 .project {
-    padding: 5rem;
     display: grid;
-    max-width: 95vw;
     grid-template-columns: 70rem max-content;
+    grid-template-rows: max-content;
     gap: 5rem;
+    padding: 6rem 5rem;
+
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow: auto; 
+
+    @include respond (laptop-lg) {
+        grid-template-columns: minmax(30rem, 70rem) max-content;
+    }
+
+    @include respond (laptop) {
+        gap: 3rem;
+        padding: 6rem 3rem;
+    }
+
+    @include respond (tablet-port) {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+    }
+
+    @include respond (mobile-sm) {
+        gap: 7rem;
+        padding: 6rem 1.5rem;
+    }
 }
 
 
 // Left Side
 .project-content {
+    @include respond (tablet-port) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+
     &__headline {
         font-size: 4rem;
         letter-spacing: 2px;
@@ -105,7 +134,11 @@
         }
     }
 
-    // School
+    // School -----------------------------------
+    &__school {
+        margin-bottom: 6rem;
+    }
+
     &__course-title {
         color: $color-primary;
         font-size: 2.25rem;
@@ -133,8 +166,17 @@
     flex-direction: column;
     row-gap: 2rem;
 
+    @include respond (tablet-port) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
     &__image {
         max-width: 40rem;
+
+        @include respond (tablet-port) {
+            max-width: 100%;
+        }
     }
 
     &__buttons {

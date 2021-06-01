@@ -39,10 +39,6 @@
         grid-template-columns: 3rem minmax(10rem, 142.5rem) 3rem;
     }
 
-    @include respond(mobile-lg) {
-        grid-template-columns: 1.5rem minmax(10rem, 142.5rem) 1.5rem;
-    }
-
     & > * {
         padding: 20rem 0;
     }
