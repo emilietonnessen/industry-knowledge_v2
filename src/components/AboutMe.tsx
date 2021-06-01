@@ -22,7 +22,7 @@ const AboutMe: React.FC = () => {
                     I chose Frontend Development as I have a great passion for structure and creativity, and I've found a way to implement both these passions of mine into the work. I burn for userfriendly design and writing clean code. I truly enjoy writing code and find myself doing extra courses and coming up with new projects on my spare time.
                 </p>
                 <p className="paragraph">
-                    Otherwise, I'm a cheerful and chipper girl who enjoys spreading the joy of life all around. To me happiness is everything, and this line of work truly makes me happy!
+                    Otherwise, I'm a cheerful girl who enjoys spreading the joy of life all around. To me happiness is everything, and this line of work truly makes me happy!
                 </p>
                 <ButtonLink link={Pdf} download theme="primary" size="md" >
                     <FileDownload color={white} classes="btn__icon" />
