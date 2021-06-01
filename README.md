@@ -6,3 +6,8 @@ Download the Zip file and run
 ```
 npm install
 ```
+Then run
+```
+npm run start
+```
+to start a localhost at port 3000
