@@ -25,8 +25,6 @@ const Portfolio: React.FC = () => {
         ));
     }
 
-    console.log("[projects]", projects);
-
     return (
         <Element name="portfolio" className="portfolio" id="portfolio">
             <h2 className="headline headline--primary">
