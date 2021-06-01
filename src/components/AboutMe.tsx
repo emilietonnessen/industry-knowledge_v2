@@ -39,7 +39,7 @@ const AboutMe: React.FC = () => {
             <Educations />
             <WorkExperiences />
         </div>
-    )
+    );
 }
 
 export default AboutMe;
