@@ -362,7 +362,9 @@
     }
 
     &__checkbox:checked ~ & > &__list{
-        display: flex;
+        @include respond (mobile-lg) {
+            display: flex;
+        }
     }
 
     &__checkbox:checked + &__button &__icon::before {
@@ -380,9 +382,10 @@
 
 
 // Social Media Links --------------------------------------
-.media-links {
+.so-me{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5rem;
     padding: 4rem;
 
     @include respond(laptop) {
@@ -409,45 +412,14 @@
             }
         }
     }
-}
 
-/* .nav-icon {
-    display: none;
-    height: 100%;
-    align-items: center;
-    padding: 0 3rem;
-    cursor: pointer;
-    z-index: 1000;
-    background-color: $color-grey-dark-2;
-    border-radius: 50%;
-    
-    @include respond(mobile-lg) {
-        display: flex;
-    }
+    &__icon {
+        height: 5rem;
+        width: 5rem;
 
-    &__button {
-        border: none;
-        border-radius: 0%;
-        outline: none;
-        background-color: #fff;
-        height: 2px;
-        width: 4.5rem;
-        cursor: pointer;
-        
-        &::before,
-        &::after {
-            content: "";
-            background-color: #fff;
-            height: 2px;
-            width: 4.5rem;
-            display: block;
-            transition: all .3s;
+        @include respond(laptop) {
+            height: 4rem;
+            width: 4rem;
         }
-
-        &::before{transform: translateY(-1.3rem);}
-        &::after{transform: translateY(1.3rem);}
     }
-
-    &:hover  &__button::before{transform: translateY(-1.7rem);}
-    &:hover  &__button::after{transform: translateY(1.7rem);}
-} */
+}
