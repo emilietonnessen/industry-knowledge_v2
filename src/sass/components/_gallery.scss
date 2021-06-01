@@ -6,6 +6,14 @@
         min-height: 70rem;
     }
 
+    @include respond(mobile-lg) {
+        min-height: 75rem;
+    }
+
+    @include respond(mobile-sm) {
+        min-height: 55rem;
+    }
+
     &__img {
         width: 50%;
         position: absolute;
@@ -13,7 +21,7 @@
         box-shadow: 0 .5rem 1.5rem rgba($color-black, .2);
 
         @include respond(tablet-port) {
-            width: 30%;
+            width: 60%;
         }
 
         @include respond(mobile-lg) {
@@ -21,7 +29,7 @@
         }
 
         @include respond(mobile-sm) {
-            width: 50%;
+            width: 60%;
         }
 
 
@@ -43,7 +51,7 @@
             }
 
             @include respond(tablet-port) {
-                left: 25rem;
+                left: 5rem;
             }
 
             @include respond(mobile-lg) {
@@ -60,12 +68,9 @@
             right: 0;
             z-index: 10;
 
-            @include respond(tablet-land) {
-                right: -2rem;
-            }
 
             @include respond(tablet-port) {
-                right: 20rem;
+                right: 0rem;
             }
 
             @include respond(mobile-lg) {
@@ -73,7 +78,7 @@
             }
 
             @include respond(mobile-sm) {
-                right: 2rem;
+                right: 0rem;
             }
         }
 
@@ -82,8 +87,12 @@
             left: 0;
             z-index: 20;
 
+            @include respond(tablet-land) {
+                top: 5rem;
+            }
+
             @include respond(tablet-port) {
-                left: 17rem;
+                left: 0rem;
             }
 
             @include respond(mobile-lg) {
@@ -91,7 +100,7 @@
             }
 
             @include respond(mobile-sm) {
-                left: 2rem;
+                left: 0rem;
                 top: 8rem;
             }
         }

@@ -4,6 +4,11 @@
     column-gap: 3rem;
     row-gap: .5rem;
 
+    @include respond(tablet-port){
+        column-gap: 2rem;
+        row-gap: .5rem;
+    }
+
     @include respond(mobile-lg){
         column-gap: 2rem;
         row-gap: .5rem;
